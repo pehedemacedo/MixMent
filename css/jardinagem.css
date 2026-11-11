@@ -1,0 +1,699 @@
+/* ==========================================================================
+   MixMent — estilos próprios (Bootstrap 5.3)
+   As cores da marca ficam nas variáveis abaixo: troque aqui para mudar o site.
+   ========================================================================== */
+:root {
+  --mm-navy: #1b2a86;
+  /* títulos e textos */
+  --mm-blue: #14307e;
+  /* ícones e links */
+  --mm-blue-btn: #2b2bd6;
+  /* botões Principais Ofertas / Confira já */
+  --mm-sky-1: #1e5fb0;
+  /* gradiente do banner */
+  --mm-sky-2: #42a6e2;
+  --mm-teal: #2fa3c4;
+  /* selo da oferta */
+  --mm-muted: #6b7a99;
+  --mm-radius: 1rem;
+}
+
+body {
+  color: var(--mm-navy);
+}
+
+/* ============================== TOPO ============================== */
+.mm-topbar {
+  padding-block: 0.6rem;
+}
+
+.mm-topbar .navbar,
+.mm-catbar .navbar {
+  padding: 0;
+}
+
+.mm-logo {
+  height: 54px;
+  width: auto;
+}
+
+/* busca em "pílula" com o ícone dentro do campo */
+.mm-search {
+  position: relative;
+  flex: 1 1 14rem;
+  min-width: 0;
+  max-width: 430px;
+  margin-left: 1rem;
+}
+
+.mm-search .form-control {
+  min-width: 0;
+  border-radius: 100px;
+  border: 1px solid #d7dee9;
+  box-shadow: 0 2px 6px rgba(20, 48, 126, 0.08);
+  padding: 0.55rem 3rem 0.55rem 1.1rem;
+}
+
+.mm-search .form-control:focus {
+  border-color: var(--mm-sky-2);
+  box-shadow: 0 0 0 0.25rem rgba(43, 43, 214, 0.15);
+}
+
+.mm-search-btn {
+  position: absolute;
+  top: 50%;
+  right: 0.35rem;
+  transform: translateY(-50%);
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--mm-navy);
+  font-size: 1.15rem;
+}
+
+.mm-search-btn:hover {
+  color: var(--mm-blue-btn);
+}
+
+/* ações do topo ficam sempre no canto direito */
+.mm-topbar .navbar-collapse {
+  flex-grow: 0;
+  margin-left: auto;
+}
+
+.mm-action {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--mm-navy);
+  font-weight: 500;
+}
+
+.mm-action i {
+  font-size: 1.5rem;
+}
+
+.mm-action:hover,
+.mm-cart:hover {
+  color: var(--mm-blue-btn);
+}
+
+.mm-cart {
+  color: var(--mm-navy);
+}
+
+.mm-cart i {
+  font-size: 1.7rem;
+}
+
+/* ======================== BARRA DE CATEGORIAS ======================== */
+.mm-catbar .navbar-collapse {
+  flex-grow: 1;
+}
+
+.mm-cat {
+  color: var(--mm-navy);
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-align: center;
+  padding-block: 0.8rem;
+}
+
+.mm-cat i {
+  font-size: 0.7rem;
+  margin-left: 0.15rem;
+}
+
+.mm-cat:hover {
+  color: var(--mm-blue-btn);
+}
+
+.mm-btn-ofertas {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--mm-blue-btn);
+  border-radius: 0.6rem;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.1rem;
+  white-space: nowrap;
+}
+
+.mm-btn-ofertas:hover {
+  background: #1d1db4;
+  color: #fff;
+}
+
+/* ============================== BANNER ============================== */
+.mm-hero {
+  background: linear-gradient(
+    115deg,
+    var(--mm-sky-1) 0%,
+    #2979c4 48%,
+    var(--mm-sky-2) 100%
+  );
+  color: #fff;
+  padding: 2.75rem 0 1rem;
+  overflow: hidden;
+}
+
+.mm-hero-title {
+  font-size: clamp(1.8rem, 3.4vw, 2.95rem);
+  font-weight: 700;
+  line-height: 1.08;
+  margin-bottom: 0.75rem;
+}
+
+.mm-hero-sub {
+  font-size: clamp(1rem, 1.7vw, 1.55rem);
+  margin-bottom: 1.25rem;
+}
+
+.mm-btn-confira {
+  background: var(--mm-blue-btn);
+  border-radius: 100px;
+  color: #fff;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.7rem 2.6rem;
+}
+
+.mm-btn-confira:hover {
+  background: #1d1db4;
+  color: #fff;
+}
+
+.mm-hero-img {
+  max-width: 270px;
+  width: 42%;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.28));
+}
+
+.mm-hero-img-sm {
+  max-width: 180px;
+}
+
+.mm-hero-note {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8rem;
+  margin: 1rem 0 0;
+  text-align: right;
+}
+
+/* ======================= SEÇÕES, CARDS E CARROSSEL ======================= */
+.mm-section {
+  padding: 3rem 0;
+}
+
+.mm-title {
+  color: var(--mm-navy);
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+}
+
+.mm-card {
+  border-radius: var(--mm-radius);
+  box-shadow: 0 8px 22px rgba(27, 42, 134, 0.09);
+  overflow: hidden;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.mm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(27, 42, 134, 0.16);
+}
+
+.mm-card-img {
+  height: 165px;
+  object-fit: contain;
+  padding: 1.25rem 1.25rem 0.5rem;
+}
+
+.mm-card-title {
+  display: block;
+  color: var(--mm-navy);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* cards "Em breve mais" */
+.mm-card-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 255px;
+  color: #b7c0d3;
+  font-size: 1.15rem;
+}
+
+/* setas do carrossel (ficam fora dos cards, como no layout) */
+.mm-arrow {
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  background: transparent;
+  color: var(--mm-navy);
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.mm-arrow:hover {
+  color: var(--mm-blue-btn);
+}
+
+/* indicadores do carrossel viram bolinhas */
+.mm-indicators {
+  position: static;
+  justify-content: center;
+  margin: 1.25rem 0 0;
+}
+
+.mm-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #c9d2e4;
+  opacity: 1;
+  text-indent: 0;
+}
+
+.mm-indicators .active {
+  background-color: var(--mm-navy);
+}
+
+/* card de produto */
+.mm-produto {
+  color: var(--mm-navy);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.mm-preco {
+  color: var(--mm-navy);
+  font-size: 1.15rem;
+}
+
+.mm-preco s {
+  opacity: 0.7;
+}
+
+.mm-badge-oferta {
+  align-self: center;
+  background: var(--mm-teal);
+  border-radius: 100px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+}
+
+/* ============================== RODAPÉ ============================== */
+.mm-footer {
+  background: #fff;
+}
+
+.mm-footer-logo {
+  height: 78px;
+  width: auto;
+}
+
+.mm-footer-slogan {
+  color: var(--mm-navy);
+  font-weight: 600;
+  max-width: 20rem;
+  margin: 0 auto 1rem;
+}
+
+.mm-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid var(--mm-navy);
+  border-radius: 0.6rem;
+  color: var(--mm-navy);
+  font-size: 1.25rem;
+}
+
+.mm-social:hover {
+  background: var(--mm-navy);
+  color: #fff;
+}
+
+.mm-footer-title {
+  color: var(--mm-navy);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.mm-footer-links a {
+  color: var(--mm-navy);
+  line-height: 2;
+  text-decoration: none;
+}
+
+.mm-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.mm-contato-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: left;
+}
+
+.mm-contato-item i {
+  color: var(--mm-navy);
+  font-size: 1.8rem;
+}
+
+.mm-contato-item span,
+.mm-contato-item strong {
+  display: block;
+  color: var(--mm-navy);
+}
+
+.mm-contato hr {
+  border-color: #dfe5ef;
+  margin: 0.35rem 0;
+  opacity: 1;
+}
+
+.mm-email {
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.mm-footer-text {
+  color: var(--mm-navy);
+}
+
+.mm-horario {
+  color: var(--mm-navy);
+}
+
+.mm-copy {
+  color: var(--mm-muted);
+}
+
+/* ============================ RESPONSIVO ============================ */
+/* No navbar colapsado (< 992px) o campo de busca ganha base pequena e cresce,
+   para caber na mesma linha que o logo e o botão do menu. */
+@media (max-width: 991.98px) {
+  .mm-search {
+    flex: 1 1 6rem;
+    margin-left: 0.5rem;
+  }
+
+  .mm-search .form-control {
+    padding-right: 2.4rem;
+  }
+
+  .mm-action,
+  .mm-cart {
+    padding-block: 0.5rem;
+  }
+
+  .mm-catbar .navbar-nav {
+    align-items: flex-start;
+    padding-block: 0.25rem;
+  }
+
+  .mm-cat {
+    text-align: left;
+  }
+
+  .mm-btn-ofertas {
+    margin-block: 0.5rem;
+  }
+
+  .mm-hero-note {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  /* categorias distribuídas ao longo de toda a barra */
+  .mm-catbar .navbar-nav {
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+
+  .mm-footer-slogan {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mm-logo {
+    height: 42px;
+  }
+
+  .mm-search .form-control {
+    font-size: 0.9rem;
+    padding-left: 0.8rem;
+  }
+
+  .mm-search-btn {
+    width: 2rem;
+    font-size: 1rem;
+  }
+
+  .mm-card-img {
+    height: 130px;
+    padding: 0.75rem 0.75rem 0.25rem;
+  }
+
+  .mm-card-soon {
+    min-height: 200px;
+  }
+}
+
+
+
+/* parte do jhonatan */
+
+main {
+    font-family: Helvetica, sans-serif;
+}
+
+.beneficios {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 20px;
+}
+
+.beneficio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 20%;
+}
+
+.beneficio img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.beneficio p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.beneficio strong {
+    color: black;
+    font-size: 17px;
+}
+
+/* TÍTULO */
+.titulo_1 {
+    padding-left: 15%;
+    font-size: 35px;
+    margin-bottom: 60px;
+    font-family: Arial, sans-serif;
+}
+
+/* ORGANIZAÇÃO DOS PRODUTOS */
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+    padding: 0 2.5%;
+}
+
+/* CARD DO PRODUTO */
+.produto {
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* IMAGENS */
+.produto img {
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+}
+
+/* BOTÕES */
+.ladin {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 15px;
+}
+
+.fake_botao,
+.fake_botao_2 {
+    background-color:#2979c4;
+    color: white;
+    border-radius: 30px;
+    padding: 7px 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* NOME DO PRODUTO */
+.nome_produto {
+    font-size: 18px;
+    min-height: 45px;
+    padding-top: 20px;
+}
+
+/* ESTRELAS */
+.estrelas {
+    color: #ff9900;
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+/* PREÇO */
+.produto h2 {
+    font-size: 26px;
+    margin-top: 25px;
+}
+
+.botão_what{
+padding-top: 50px;
+background-color: #fff;
+color: rgb(0, 255, 0);
+padding: 10px 100px;
+text-decoration: none;
+text-align: right;
+border-radius: 10px;
+border:solid 1px rgb(0, 255, 0);
+}
+
+.quantidade{
+padding-left: 25px;
+padding-right: 35px;
+}
+
+.quantidade select {
+    width: 110px;
+    height: 58px;
+    border: 1px solid #d5d5d5;
+    border-radius: 9px;
+    background-color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+}
+
+.qnt{
+display: flex;
+
+}
+
+.button-19 {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
+
+.button-19:active {
+  border-width: 4px 0 0;
+  background: none;
+}
