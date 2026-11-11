@@ -1,0 +1,484 @@
+/* ==========================================================================
+   MixMent — estilos próprios (Bootstrap 5.3)
+   As cores da marca ficam nas variáveis abaixo: troque aqui para mudar o site.
+   ========================================================================== */
+:root {
+    --mm-navy: #1b2a86;
+    /* títulos e textos */
+    --mm-blue: #14307e;
+    /* ícones e links */
+    --mm-blue-btn: #2b2bd6;
+    /* botões Principais Ofertas / Confira já */
+    --mm-sky-1: #1e5fb0;
+    /* gradiente do banner */
+    --mm-sky-2: #42a6e2;
+    --mm-teal: #2fa3c4;
+    /* selo da oferta */
+    --mm-muted: #6b7a99;
+    --mm-radius: 1rem;
+}
+
+body {
+    color: var(--mm-navy);
+}
+
+/* ============================== TOPO ============================== */
+.mm-topbar {
+    padding-block: .6rem;
+}
+
+.mm-topbar .navbar,
+.mm-catbar .navbar {
+    padding: 0;
+}
+
+.mm-logo {
+    height: 54px;
+    width: auto;
+}
+
+/* busca em "pílula" com o ícone dentro do campo */
+.mm-search {
+    position: relative;
+    flex: 1 1 14rem;
+    min-width: 0;
+    max-width: 430px;
+    margin-left: 1rem;
+}
+
+.mm-search .form-control {
+    min-width: 0;
+    border-radius: 100px;
+    border: 1px solid #d7dee9;
+    box-shadow: 0 2px 6px rgba(20, 48, 126, .08);
+    padding: .55rem 3rem .55rem 1.1rem;
+}
+
+.mm-search .form-control:focus {
+    border-color: var(--mm-sky-2);
+    box-shadow: 0 0 0 .25rem rgba(43, 43, 214, .15);
+}
+
+.mm-search-btn {
+    position: absolute;
+    top: 50%;
+    right: .35rem;
+    transform: translateY(-50%);
+    width: 2.4rem;
+    height: 2.4rem;
+    display: grid;
+    place-items: center;
+    border: 0;
+    background: transparent;
+    color: var(--mm-navy);
+    font-size: 1.15rem;
+}
+
+.mm-search-btn:hover {
+    color: var(--mm-blue-btn);
+}
+
+/* ações do topo ficam sempre no canto direito */
+.mm-topbar .navbar-collapse {
+    flex-grow: 0;
+    margin-left: auto;
+}
+
+.mm-action {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    color: var(--mm-navy);
+    font-weight: 500;
+}
+
+.mm-action i {
+    font-size: 1.5rem;
+}
+
+.mm-action:hover,
+.mm-cart:hover {
+    color: var(--mm-blue-btn);
+}
+
+.mm-cart {
+    color: var(--mm-navy);
+}
+
+.mm-cart i {
+    font-size: 1.7rem;
+}
+
+/* ======================== BARRA DE CATEGORIAS ======================== */
+.mm-catbar .navbar-collapse {
+    flex-grow: 1;
+}
+
+.mm-cat {
+    color: var(--mm-navy);
+    font-weight: 500;
+    font-size: .95rem;
+    line-height: 1.2;
+    text-align: center;
+    padding-block: .8rem;
+}
+
+.mm-cat i {
+    font-size: .7rem;
+    margin-left: .15rem;
+}
+
+.mm-cat:hover {
+    color: var(--mm-blue-btn);
+}
+
+.mm-btn-ofertas {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: var(--mm-blue-btn);
+    border-radius: .6rem;
+    color: #fff;
+    font-weight: 600;
+    padding: .6rem 1.1rem;
+    white-space: nowrap;
+}
+
+.mm-btn-ofertas:hover {
+    background: #1d1db4;
+    color: #fff;
+}
+
+/* ============================== BANNER ============================== */
+.mm-hero {
+    background: linear-gradient(115deg, var(--mm-sky-1) 0%, #2979c4 48%, var(--mm-sky-2) 100%);
+    color: #fff;
+    padding: 2.75rem 0 1rem;
+    overflow: hidden;
+}
+
+.mm-hero-title {
+    font-size: clamp(1.8rem, 3.4vw, 2.95rem);
+    font-weight: 700;
+    line-height: 1.08;
+    margin-bottom: .75rem;
+}
+
+.mm-hero-sub {
+    font-size: clamp(1rem, 1.7vw, 1.55rem);
+    margin-bottom: 1.25rem;
+}
+
+.mm-btn-confira {
+    background: var(--mm-blue-btn);
+    border-radius: 100px;
+    color: #fff;
+    font-size: clamp(1rem, 1.5vw, 1.35rem);
+    font-weight: 700;
+    letter-spacing: .02em;
+    padding: .7rem 2.6rem;
+}
+
+.mm-btn-confira:hover {
+    background: #1d1db4;
+    color: #fff;
+}
+
+.mm-hero-img {
+    max-width: 270px;
+    width: 42%;
+    filter: drop-shadow(0 14px 22px rgba(0, 0, 0, .28));
+}
+
+.mm-hero-img-sm {
+    max-width: 180px;
+}
+
+.mm-hero-note {
+    color: rgba(255, 255, 255, .75);
+    font-size: .8rem;
+    margin: 1rem 0 0;
+    text-align: right;
+}
+
+/* ======================= SEÇÕES, CARDS E CARROSSEL ======================= */
+.mm-section {
+    padding: 3rem 0;
+}
+
+.mm-title {
+    color: var(--mm-navy);
+    font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+    font-weight: 700;
+    margin-bottom: 1.75rem;
+}
+
+.mm-card {
+    border-radius: var(--mm-radius);
+    box-shadow: 0 8px 22px rgba(27, 42, 134, .09);
+    overflow: hidden;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.mm-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(27, 42, 134, .16);
+}
+
+.mm-card-img {
+    height: 165px;
+    object-fit: contain;
+    padding: 1.25rem 1.25rem .5rem;
+}
+
+.mm-card-title {
+    display: block;
+    color: var(--mm-navy);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* cards "Em breve mais" */
+.mm-card-soon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 255px;
+    color: #b7c0d3;
+    font-size: 1.15rem;
+}
+
+/* setas do carrossel (ficam fora dos cards, como no layout) */
+.mm-arrow {
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    background: transparent;
+    color: var(--mm-navy);
+    font-size: 1.75rem;
+    line-height: 1;
+}
+
+.mm-arrow:hover {
+    color: var(--mm-blue-btn);
+}
+
+/* indicadores do carrossel viram bolinhas */
+.mm-indicators {
+    position: static;
+    justify-content: center;
+    margin: 1.25rem 0 0;
+}
+
+.mm-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #c9d2e4;
+    opacity: 1;
+    text-indent: 0;
+}
+
+.mm-indicators .active {
+    background-color: var(--mm-navy);
+}
+
+/* card de produto */
+.mm-produto {
+    color: var(--mm-navy);
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.mm-preco {
+    color: var(--mm-navy);
+    font-size: 1.15rem;
+}
+
+.mm-preco s {
+    opacity: .7;
+}
+
+.mm-badge-oferta {
+    align-self: center;
+    background: var(--mm-teal);
+    border-radius: 100px;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 600;
+    padding: .5rem 1.1rem;
+}
+
+/* ============================== RODAPÉ ============================== */
+.mm-footer {
+    background: #fff;
+}
+
+.mm-footer-logo {
+    height: 78px;
+    width: auto;
+}
+
+.mm-footer-slogan {
+    color: var(--mm-navy);
+    font-weight: 600;
+    max-width: 20rem;
+    margin: 0 auto 1rem;
+}
+
+.mm-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid var(--mm-navy);
+    border-radius: .6rem;
+    color: var(--mm-navy);
+    font-size: 1.25rem;
+}
+
+.mm-social:hover {
+    background: var(--mm-navy);
+    color: #fff;
+}
+
+.mm-footer-title {
+    color: var(--mm-navy);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.mm-footer-links a {
+    color: var(--mm-navy);
+    line-height: 2;
+    text-decoration: none;
+}
+
+.mm-footer-links a:hover {
+    text-decoration: underline;
+}
+
+.mm-contato-item {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    text-align: left;
+}
+
+.mm-contato-item i {
+    color: var(--mm-navy);
+    font-size: 1.8rem;
+}
+
+.mm-contato-item span,
+.mm-contato-item strong {
+    display: block;
+    color: var(--mm-navy);
+}
+
+.mm-contato hr {
+    border-color: #dfe5ef;
+    margin: .35rem 0;
+    opacity: 1;
+}
+
+.mm-email {
+    font-size: .95rem;
+    overflow-wrap: anywhere;
+}
+
+.mm-footer-text {
+    color: var(--mm-navy);
+}
+
+.mm-horario {
+    color: var(--mm-navy);
+}
+
+.mm-copy {
+    color: var(--mm-muted);
+}
+
+/* ============================ RESPONSIVO ============================ */
+/* No navbar colapsado (< 992px) o campo de busca ganha base pequena e cresce,
+   para caber na mesma linha que o logo e o botão do menu. */
+@media (max-width: 991.98px) {
+    .mm-search {
+        flex: 1 1 6rem;
+        margin-left: .5rem;
+    }
+
+    .mm-search .form-control {
+        padding-right: 2.4rem;
+    }
+
+    .mm-action,
+    .mm-cart {
+        padding-block: .5rem;
+    }
+
+    .mm-catbar .navbar-nav {
+        align-items: flex-start;
+        padding-block: .25rem;
+    }
+
+    .mm-cat {
+        text-align: left;
+    }
+
+    .mm-btn-ofertas {
+        margin-block: .5rem;
+    }
+
+    .mm-hero-note {
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    /* categorias distribuídas ao longo de toda a barra */
+    .mm-catbar .navbar-nav {
+        flex: 1 1 auto;
+        justify-content: space-between;
+    }
+
+    .mm-footer-slogan {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .mm-logo {
+        height: 42px;
+    }
+
+    .mm-search .form-control {
+        font-size: .9rem;
+        padding-left: .8rem;
+    }
+
+    .mm-search-btn {
+        width: 2rem;
+        font-size: 1rem;
+    }
+
+    .mm-card-img {
+        height: 130px;
+        padding: .75rem .75rem .25rem;
+    }
+
+    .mm-card-soon {
+        min-height: 200px;
+    }
+}
+
+
+

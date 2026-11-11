@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Peças">
+    <g fill="none" stroke="#0f2f70" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="60" r="30" fill="#39a0e0"/>
+        <circle cx="60" cy="60" r="12" fill="#d9ebff" stroke="none"/>
+        <circle cx="60" cy="60" r="4" fill="#24314d" stroke="none"/>
+        <path d="M90 60h12M18 60H6M60 90v12M60 18V6M81 81l9 9M30 30l-9-9M81 39l9-9M30 90l-9 9"/>
+    </g>
+</svg>

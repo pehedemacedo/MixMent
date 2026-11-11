@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Serra mármore">
+    <g fill="none" stroke="#0f2f70" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 46h38a12 12 0 0 1 12 12v10H32a10 10 0 0 1-10-10v-2a10 10 0 0 1 10-10z"
+            fill="#39a0e0"/>
+        <path d="M82 52 102 32"/>
+        <circle cx="60" cy="78" r="24" fill="#cfd8e6"/>
+        <circle cx="60" cy="78" r="6" fill="#24314d" stroke="none"/>
+        <path d="M34 68a28 28 0 0 1 52-4"/>
+    </g>
+</svg>

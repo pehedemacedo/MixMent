@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Cortador de grama">
+    <g fill="none" stroke="#0f2f70" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M30 40h24a10 10 0 0 1 10 10v10H30a8 8 0 0 1-8-8v-4a8 8 0 0 1 8-8z" fill="#144a9e"
+            stroke="none"/>
+        <path d="M34 62h40a12 12 0 0 1 12 12v4a12 12 0 0 1-12 12H34a12 12 0 0 1-12-12v-4a12 12 0 0 1 12-12z"
+            fill="#39a0e0"/>
+        <path d="M48 62 92 20h14"/>
+        <circle cx="36" cy="96" r="11" fill="#24314d"/>
+        <circle cx="88" cy="96" r="11" fill="#24314d"/>
+    </g>
+</svg>

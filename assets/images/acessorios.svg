@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Acessórios">
+    <g fill="none" stroke="#0f2f70" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 56h92a8 8 0 0 1 8 8v26a8 8 0 0 1-8 8H14a8 8 0 0 1-8-8V64a8 8 0 0 1 8-8z"
+            fill="#39a0e0"/>
+        <path d="M30 56V38a8 8 0 0 1 8-8h44a8 8 0 0 1 8 8v18"/>
+        <path d="M6 74h108"/>
+        <path d="M50 74h20v10H50z" fill="#d9ebff"/>
+    </g>
+</svg>
