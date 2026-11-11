@@ -1,0 +1,195 @@
+/* ==========================================================================
+   MixMent — estilos exclusivos da página inicial (index.html)
+   Carregue este arquivo somente no index.html, depois de style.css.
+   ========================================================================== */
+
+/* ============================== BANNER ============================== */
+.mm-hero {
+  background: linear-gradient(
+    115deg,
+    var(--mm-sky-1) 0%,
+    #2979c4 48%,
+    var(--mm-sky-2) 100%
+  );
+  color: #fff;
+  padding: 2.75rem 0 1rem;
+  overflow: hidden;
+}
+
+.mm-hero-title {
+  font-size: clamp(1.8rem, 3.4vw, 2.95rem);
+  font-weight: 700;
+  line-height: 1.08;
+  margin-bottom: 0.75rem;
+}
+
+.mm-hero-sub {
+  font-size: clamp(1rem, 1.7vw, 1.55rem);
+  margin-bottom: 1.25rem;
+}
+
+.mm-btn-confira {
+  background: var(--mm-blue-btn);
+  border-radius: 100px;
+  color: #fff;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.7rem 2.6rem;
+}
+
+.mm-btn-confira:hover {
+  background: #1d1db4;
+  color: #fff;
+}
+
+.mm-hero-img {
+  max-width: 270px;
+  width: 42%;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.28));
+}
+
+.mm-hero-img-sm {
+  max-width: 180px;
+}
+
+.mm-hero-note {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8rem;
+  margin: 1rem 0 0;
+  text-align: right;
+}
+
+/* ======================= SEÇÕES, CARDS E CARROSSEL ======================= */
+.mm-section {
+  padding: 3rem 0;
+}
+
+.mm-title {
+  color: var(--mm-navy);
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+}
+
+.mm-card {
+  border-radius: var(--mm-radius);
+  box-shadow: 0 8px 22px rgba(27, 42, 134, 0.09);
+  overflow: hidden;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.mm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(27, 42, 134, 0.16);
+}
+
+.mm-card-img {
+  height: 165px;
+  object-fit: contain;
+  padding: 1.25rem 1.25rem 0.5rem;
+}
+
+.mm-card-title {
+  display: block;
+  color: var(--mm-navy);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* cards "Em breve mais" */
+.mm-card-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 255px;
+  color: #b7c0d3;
+  font-size: 1.15rem;
+}
+
+/* setas do carrossel (ficam fora dos cards, como no layout) */
+.mm-arrow {
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  background: transparent;
+  color: var(--mm-navy);
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.mm-arrow:hover {
+  color: var(--mm-blue-btn);
+}
+
+/* indicadores do carrossel viram bolinhas */
+.mm-indicators {
+  position: static;
+  justify-content: center;
+  margin: 1.25rem 0 0;
+}
+
+.mm-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #c9d2e4;
+  opacity: 1;
+  text-indent: 0;
+}
+
+.mm-indicators .active {
+  background-color: var(--mm-navy);
+}
+
+/* card de produto */
+.mm-produto {
+  color: var(--mm-navy);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.mm-preco {
+  color: var(--mm-navy);
+  font-size: 1.15rem;
+}
+
+.mm-preco s {
+  opacity: 0.7;
+}
+
+.mm-badge-oferta {
+  align-self: center;
+  background: var(--mm-teal);
+  border-radius: 100px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+}
+
+/* ============================ RESPONSIVO ============================ */
+/* Ajustes exclusivos da página inicial */
+@media (max-width: 991.98px) {
+  .mm-hero-note {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mm-card-img {
+    height: 130px;
+    padding: 0.75rem 0.75rem 0.25rem;
+  }
+
+  .mm-card-soon {
+    min-height: 200px;
+  }
+}
