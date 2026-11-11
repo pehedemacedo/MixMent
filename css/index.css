@@ -4,28 +4,25 @@
    ========================================================================== */
 
 /* ============================== BANNER ============================== */
+
 .mm-hero {
-  background: linear-gradient(
-    115deg,
-    var(--mm-sky-1) 0%,
-    #2979c4 48%,
-    var(--mm-sky-2) 100%
-  );
-  color: #fff;
-  padding: 2.75rem 0 1rem;
-  overflow: hidden;
+  background-image: url("../assets/images/banner2%201.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
 }
 
 .mm-hero-title {
-  font-size: clamp(1.8rem, 3.4vw, 2.95rem);
-  font-weight: 700;
-  line-height: 1.08;
-  margin-bottom: 0.75rem;
+  color: #fff;
 }
 
 .mm-hero-sub {
-  font-size: clamp(1rem, 1.7vw, 1.55rem);
-  margin-bottom: 1.25rem;
+  color: #fff;
 }
 
 .mm-btn-confira {
