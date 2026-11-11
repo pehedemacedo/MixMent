@@ -22,13 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   await Promise.all([
-    carregarComponente(
-      '[data-componente="navbar"]',
-      "./components/navbar.html",
-    ),
-    carregarComponente(
-      '[data-componente="rodape"]',
-      "./components/rodape.html",
-    ),
+    carregarComponente('[data-componente="navbar"]', "/components/navbar.html"),
+    carregarComponente('[data-componente="rodape"]', "/components/rodape.html"),
   ]);
 });
