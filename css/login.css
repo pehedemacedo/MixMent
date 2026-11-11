@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #00a0c4, #0063c4);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.painel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 25px 20px 30px;
+  border: 3px solid #0e0b0b;
+  background-color: #f2f2ff;
+  border-radius: 20px;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.painel h2 {
+  margin-bottom: 25px;
+}
+
+.form__group {
+  width: 100%;
+}
+
+.form__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+
+.form__input {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  outline: none;
+  border-bottom: 0.3rem solid #141a20;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+.form__input:placeholder-shown + .form__label {
+  transition-delay: 0s;
+}
+
+.form__input:not(:placeholder-shown) + .form__label {
+  transition-delay: 0.02s;
+}
+
+.botao-login {
+  font-size: 1rem;
+  padding: 12px 30px;
+  margin-top: 5px;
+  background-color: #1769bd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botao-login:hover {
+  background-color: #10569e;
+}
+
+@media (max-width: 480px) {
+  .painel {
+    width: 85%;
+  }
+}
